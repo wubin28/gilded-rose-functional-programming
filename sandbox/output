@@ -1,6 +1,11 @@
-JUnit version 4.11-SNAPSHOT-20120416-1530
-..............
-Time: 0.069
-
-OK (14 tests)
-
+GildedRoseTest.java:106: error: cannot find symbol
+            .map(GildedRose.generateAgedBrieForSellInGreaterThan0());
+                           ^
+  symbol:   method generateAgedBrieForSellInGreaterThan0()
+  location: class GildedRose
+GildedRoseTest.java:104: error: cannot find symbol
+            .filter(GildedRose.isAgedBrie())
+                              ^
+  symbol:   method isAgedBrie()
+  location: class GildedRose
+2 errors
