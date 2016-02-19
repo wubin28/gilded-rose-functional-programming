@@ -1,6 +1,6 @@
-JUnit version 4.11-SNAPSHOT-20120416-1530
-.............
-Time: 0.13
-
-OK (13 tests)
-
+GildedRoseTest.java:37: error: cannot find symbol
+            .map(GildedRose.generateNormalItemsForSellByDateNotPassed());
+                           ^
+  symbol:   method generateNormalItemsForSellByDateNotPassed()
+  location: class GildedRose
+1 error

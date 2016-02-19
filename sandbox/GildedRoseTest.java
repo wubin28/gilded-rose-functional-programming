@@ -34,7 +34,7 @@ public class GildedRoseTest {
         items.stream()
             .filter(GildedRose.isNormalItem())
             .filter(GildedRose.isSellInGreaterThan0())
-            .map(item -> new Item(item.name, item.sellIn - 1, item.quality - 1));
+            .map(GildedRose.generateNormalItemsForSellByDateNotPassed());
 
         Stream<Item> normalItemStream = items.stream()
                 .filter(item -> !item.name.equals("Aged Brie") && 
