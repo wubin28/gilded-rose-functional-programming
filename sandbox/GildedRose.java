@@ -47,7 +47,7 @@ class GildedRose {
             if (updatedSellIn < 0) {
          
                 if (updatedQuality > 0) {  
-                    updatedQuality = item.sellIn - 2;                           
+                    updatedQuality = item.quality - 2;                           
                 }
             }
             
