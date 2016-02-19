@@ -24,4 +24,9 @@ class GildedRose {
     public static Predicate<Item> isSellInGreaterThan0() {
         return item -> item.sellIn > 0;
     }
+
+    public static Function<Item, Item> generateNormalItemsForSellByDateNotPassed() {
+        return item -> 
+            new Item(item.name, item.sellIn - 1, item.quality - 1);
+    }
 }

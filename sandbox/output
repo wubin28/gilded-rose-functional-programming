@@ -1,6 +1,6 @@
-GildedRoseTest.java:37: error: cannot find symbol
-            .map(GildedRose.generateNormalItemsForSellByDateNotPassed());
-                           ^
-  symbol:   method generateNormalItemsForSellByDateNotPassed()
+GildedRose.java:28: error: cannot find symbol
+    public static Function<Item, Item> generateNormalItemsForSellByDateNotPassed() {
+                  ^
+  symbol:   class Function
   location: class GildedRose
 1 error
