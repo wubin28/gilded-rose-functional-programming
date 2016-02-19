@@ -179,6 +179,7 @@ public class GildedRoseTest {
 
         List<Item> normalItemsUpdated = normalItemStream.collect(Collectors.toList());
 
+        System.out.println(normalItemsUpdated);
         assertEquals(1, normalItemsUpdated.size());
         assertEquals(2, normalItemsUpdated.get(0).sellIn);
         assertEquals(80, normalItemsUpdated.get(0).quality);
