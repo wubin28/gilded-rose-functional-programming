@@ -30,16 +30,16 @@ public class GildedRoseTest {
             new Item("Conjured", 12, 45)
         );
 
-        Stream<Item> normalItemStream = items.stream()
+        Stream<Item> itemStream = items.stream()
             .filter(GildedRose.isNormalItem())
             .filter(GildedRose.isSellInGreaterThan0())
             .map(GildedRose.generateUpdatedNormalItems());
 
-        List<Item> normalItemsUpdated = normalItemStream.collect(Collectors.toList());
+        List<Item> itemsUpdated = itemStream.collect(Collectors.toList());
 
-        assertEquals(1, normalItemsUpdated.size());
-        assertEquals(0, normalItemsUpdated.get(0).sellIn);
-        assertEquals(9, normalItemsUpdated.get(0).quality);
+        assertEquals(1, itemsUpdated.size());
+        assertEquals(0, itemsUpdated.get(0).sellIn);
+        assertEquals(9, itemsUpdated.get(0).quality);
     }
 
     @Test
@@ -65,16 +65,16 @@ public class GildedRoseTest {
             new Item("Conjured", 12, 45)
         );
 
-        Stream<Item> normalItemStream = items.stream()
+        Stream<Item> itemStream = items.stream()
             .filter(GildedRose.isNormalItem())
             .filter(GildedRose.isSellInNoMoreThan0())
             .map(GildedRose.generateUpdatedNormalItems());
 
-        List<Item> normalItemsUpdated = normalItemStream.collect(Collectors.toList());
+        List<Item> itemsUpdated = itemStream.collect(Collectors.toList());
 
-        assertEquals(1, normalItemsUpdated.size());
-        assertEquals(-1, normalItemsUpdated.get(0).sellIn);
-        assertEquals(7, normalItemsUpdated.get(0).quality);
+        assertEquals(1, itemsUpdated.size());
+        assertEquals(-1, itemsUpdated.get(0).sellIn);
+        assertEquals(7, itemsUpdated.get(0).quality);
     }
 
     @Test
@@ -100,16 +100,16 @@ public class GildedRoseTest {
             new Item("Conjured", 12, 45)
         );
 
-        Stream<Item> normalItemStream = items.stream()
+        Stream<Item> itemStream = items.stream()
             .filter(GildedRose.isAgedBrie())
             .filter(GildedRose.isSellInGreaterThan0())
             .map(GildedRose.generateUpdatedAgedBrie());
 
-        List<Item> normalItemsUpdated = normalItemStream.collect(Collectors.toList());
+        List<Item> itemsUpdated = itemStream.collect(Collectors.toList());
 
-        assertEquals(1, normalItemsUpdated.size());
-        assertEquals(0, normalItemsUpdated.get(0).sellIn);
-        assertEquals(6, normalItemsUpdated.get(0).quality);
+        assertEquals(1, itemsUpdated.size());
+        assertEquals(0, itemsUpdated.get(0).sellIn);
+        assertEquals(6, itemsUpdated.get(0).quality);
     }
 
     @Test
