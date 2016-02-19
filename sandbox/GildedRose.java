@@ -39,4 +39,9 @@ class GildedRose {
         return item -> 
             new Item(item.name, item.sellIn - 1, item.quality - 2);
     }
+
+    public static Function<Item, Item> generateAgedBrieForSellInGreaterThan0() {
+        return item -> 
+            new Item(item.name, item.sellIn - 1, item.quality + 1);
+    }
 }
