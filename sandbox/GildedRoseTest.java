@@ -32,7 +32,10 @@ public class GildedRoseTest {
         );
 
         Stream<Item> normalItemStream = items.stream()
-                .filter(item -> isNormalItem(item))
+                .filter(item -> !item.name.equals("Aged Brie") && 
+                    !item.name.equals("Sulfuras, Hand of Ragnaros") &&
+                    !item.name.equals("Backstage passes to a TAFKAL80ETC concert") &&
+                    !item.name.equals("Conjured"))
                 .filter(item -> item.sellIn > 0)
                 .map(item -> new Item(item.name, item.sellIn - 1, item.quality - 1));
 
@@ -41,13 +44,6 @@ public class GildedRoseTest {
         assertEquals(1, normalItemsUpdated.size());
         assertEquals(0, normalItemsUpdated.get(0).sellIn);
         assertEquals(9, normalItemsUpdated.get(0).quality);
-    }
-
-    private boolean isNormalItem(Item item) {
-        return !item.name.equals("Aged Brie") && 
-            !item.name.equals("Sulfuras, Hand of Ragnaros") &&
-            !item.name.equals("Backstage passes to a TAFKAL80ETC concert") &&
-            !item.name.equals("Conjured");
     }
 
     @Test
