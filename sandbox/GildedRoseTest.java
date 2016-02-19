@@ -209,17 +209,16 @@ public class GildedRoseTest {
             new Item("Conjured", 12, 45)
         );
 
-        Stream<Item> normalItemStream = items.stream()
+        Stream<Item> itemStream = items.stream()
             .filter(GildedRose.isSulfuras())
-            .filter(GildedRose.isSellInGreaterThan0())
+            .filter(GildedRose.isSellInNoMoreThan0())
             .map(GildedRose.generateUpdatedSulfuras());
 
-        List<Item> normalItemsUpdated = normalItemStream.collect(Collectors.toList());
+        List<Item> itemsUpdated = itemStream.collect(Collectors.toList());
 
-        System.out.println(normalItemsUpdated);
-        assertEquals(1, normalItemsUpdated.size());
-        assertEquals(0, normalItemsUpdated.get(0).sellIn);
-        assertEquals(80, normalItemsUpdated.get(0).quality);
+        assertEquals(1, itemsUpdated.size());
+        assertEquals(0, itemsUpdated.get(0).sellIn);
+        assertEquals(80, itemsUpdated.get(0).quality);
     }
 
     @Test
