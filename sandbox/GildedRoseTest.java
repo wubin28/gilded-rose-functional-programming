@@ -136,16 +136,16 @@ public class GildedRoseTest {
             new Item("Conjured", 12, 45)
         );
 
-        Stream<Item> normalItemStream = items.stream()
+        Stream<Item> itemStream = items.stream()
             .filter(GildedRose.isAgedBrie())
             .filter(GildedRose.isSellInNoMoreThan0())
             .map(GildedRose.generateUpdatedAgedBrie());
 
-        List<Item> normalItemsUpdated = normalItemStream.collect(Collectors.toList());
+        List<Item> itemsUpdated = itemStream.collect(Collectors.toList());
 
-        assertEquals(1, normalItemsUpdated.size());
-        assertEquals(-1, normalItemsUpdated.get(0).sellIn);
-        assertEquals(8, normalItemsUpdated.get(0).quality);
+        assertEquals(1, itemsUpdated.size());
+        assertEquals(-1, itemsUpdated.get(0).sellIn);
+        assertEquals(8, itemsUpdated.get(0).quality);
     }
 
     @Test
