@@ -1,12 +1,6 @@
-JUnit version 4.11-SNAPSHOT-20120416-1530
-.................E..[Sulfuras, Hand of Ragnaros, 2, 80]
-
-Time: 0.089
-There was 1 failure:
-1) Backstage_Passes_quality_should_equal_0_when_sellin_no_more_than_0_using_functional_programming(GildedRoseTest)
-java.lang.AssertionError: expected:<-1> but was:<0>
-	at GildedRoseTest.Backstage_Passes_quality_should_equal_0_when_sellin_no_more_than_0_using_functional_programming(GildedRoseTest.java:256)
-
-FAILURES!!!
-Tests run: 19,  Failures: 1
-
+GildedRoseTest.java:251: error: cannot find symbol
+            .map(GildedRose.generateUpdatedBackstagePasses());
+                           ^
+  symbol:   method generateUpdatedBackstagePasses()
+  location: class GildedRose
+1 error

@@ -248,7 +248,7 @@ public class GildedRoseTest {
         Stream<Item> itemStream = items.stream()
             .filter(GildedRose.isBackstagePasses())
             .filter(GildedRose.isSellInNoMoreThan0())
-            .map(GildedRose.generateUpdatedSulfuras());
+            .map(GildedRose.generateUpdatedBackstagePasses());
 
         List<Item> itemsUpdated = itemStream.collect(Collectors.toList());
 
