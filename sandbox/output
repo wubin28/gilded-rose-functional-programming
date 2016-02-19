@@ -1,7 +1,12 @@
 JUnit version 4.11-SNAPSHOT-20120416-1530
-...................[Sulfuras, Hand of Ragnaros, 2, 80]
+.................E...[Sulfuras, Hand of Ragnaros, 2, 80]
 
-Time: 0.084
+Time: 0.09
+There was 1 failure:
+1) Backstage_Passes_quality_should_increase_by_1_when_sellin_greater_than_10_using_functional_programming(GildedRoseTest)
+java.lang.AssertionError: expected:<1> but was:<3>
+	at GildedRoseTest.Backstage_Passes_quality_should_increase_by_1_when_sellin_greater_than_10_using_functional_programming(GildedRoseTest.java:297)
 
-OK (19 tests)
+FAILURES!!!
+Tests run: 20,  Failures: 1
 
