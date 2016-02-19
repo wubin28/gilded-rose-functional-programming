@@ -31,18 +31,10 @@ public class GildedRoseTest {
             new Item("Conjured", 12, 45)
         );
 
-        items.stream()
+        Stream<Item> normalItemStream = items.stream()
             .filter(GildedRose.isNormalItem())
             .filter(GildedRose.isSellInGreaterThan0())
             .map(GildedRose.generateNormalItemsForSellByDateNotPassed());
-
-        Stream<Item> normalItemStream = items.stream()
-                .filter(item -> !item.name.equals("Aged Brie") && 
-                    !item.name.equals("Sulfuras, Hand of Ragnaros") &&
-                    !item.name.equals("Backstage passes to a TAFKAL80ETC concert") &&
-                    !item.name.equals("Conjured"))
-                .filter(item -> item.sellIn > 0)
-                .map(item -> new Item(item.name, item.sellIn - 1, item.quality - 1));
 
         List<Item> normalItemsUpdated = normalItemStream.collect(Collectors.toList());
 
