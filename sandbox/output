@@ -1,11 +1,4 @@
-GildedRoseTest.java:36: error: cannot find symbol
-            .map(GildedRose.generateUpdatedNormalItems());
-                           ^
-  symbol:   method generateUpdatedNormalItems()
-  location: class GildedRose
-GildedRoseTest.java:71: error: cannot find symbol
-            .map(GildedRose.generateUpdatedNormalItems());
-                           ^
-  symbol:   method generateUpdatedNormalItems()
-  location: class GildedRose
-2 errors
+GildedRose.java:55: error: ';' expected
+        }
+         ^
+1 error

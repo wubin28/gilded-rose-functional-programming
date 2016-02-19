@@ -34,14 +34,25 @@ class GildedRose {
         return item -> item.sellIn <= 0;
     }
 
-    public static Function<Item, Item> generateNormalItemsForSellInGreaterThan0() {
-        return item -> 
-            new Item(item.name, item.sellIn - 1, item.quality - 1);
-    }
+    public static Function<Item, Item> generateUpdatedNormalItems() {
+        return item -> {
+            int updatedQuality = 0;
 
-    public static Function<Item, Item> generateNormalItemsForSellInNoMoreThan0() {
-        return item -> 
-            new Item(item.name, item.sellIn - 1, item.quality - 2);
+            if (item.quality > 0) {                    
+                updatedQuality = item.quality - 1;
+            }
+
+            int updatedSellIn = item.sellIn - 1;
+
+            if (updatedSellIn < 0) {
+         
+                if (updatedQuality > 0) {  
+                    updatedQuality = item.sellIn - 2;                           
+                }
+            }
+            
+            return new Item(item.name, updatedSellIn, updatedQuality);
+        }
     }
 
     public static Function<Item, Item> generateAgedBrieForSellInGreaterThan0() {
