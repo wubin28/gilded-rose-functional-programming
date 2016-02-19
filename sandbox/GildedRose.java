@@ -55,8 +55,24 @@ class GildedRose {
         };
     }
 
-    public static Function<Item, Item> generateAgedBrieForSellInGreaterThan0() {
-        return item -> 
-            new Item(item.name, item.sellIn - 1, item.quality + 1);
+    public static Function<Item, Item> generateUpdatedAgedBrie() {
+        return item -> {
+            int updatedQuality = item.quality;
+
+            if (item.quality < 50) {                    
+                updatedQuality = item.quality + 1;
+            }
+
+            int updatedSellIn = item.sellIn - 1;
+
+            if (updatedSellIn < 0) {
+         
+                if (updatedQuality < 50) {  
+                    updatedQuality = item.quality + 2;                           
+                }
+            }
+
+            return new Item(item.name, updatedSellIn, updatedQuality);
+        };
     }
 }
