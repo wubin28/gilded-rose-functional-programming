@@ -50,6 +50,10 @@ class GildedRose {
         return item -> item.sellIn > 5 && item.sellIn <= 10;
     }
 
+    public static Predicate<Item> isSellInBetween0And5() {
+        return item -> item.sellIn > 0 && item.sellIn <= 5;
+    }
+
     public static Function<Item, Item> generateUpdatedNormalItems() {
         return item -> {
             int updatedQuality = item.quality;
