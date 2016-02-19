@@ -427,7 +427,31 @@ public class GildedRoseTest {
         assertEquals(18, app.items[0].quality);
     }
 
+    @Test
+    public void Conjured_quality_should_decrease_by_4_when_no_more_than_0_using_functional_programming() {
+          List<Item> items = Arrays.asList(
+            new Item("Normal item", 1, 10),
+            new Item("Normal item", 0, 10),
+            new Item("Aged Brie", 1, 5),
+            new Item("Aged Brie", 0, 6),
+            new Item("Backstage passes to a TAFKAL80ETC concert", 0, 35),
+            new Item("Backstage passes to a TAFKAL80ETC concert", 11, 34),
+            new Item("Backstage passes to a TAFKAL80ETC concert", 10, 33),
+            new Item("Backstage passes to a TAFKAL80ETC concert", 5, 32),
+            new Item("Sulfuras, Hand of Ragnaros", 0, 80),
+            new Item("Conjured", 0, 45)
+        );
 
+        Stream<Item> itemStream = items.stream()
+            .filter(GildedRose.isConjured())
+            .filter(GildedRose.isSellInGreaterThan0())
+            .map(GildedRose.generateUpdatedConjured());
 
+        List<Item> itemsUpdated = itemStream.collect(Collectors.toList());
+
+        assertEquals(1, itemsUpdated.size());
+        assertEquals(-1, itemsUpdated.get(0).sellIn);
+        assertEquals(41, itemsUpdated.get(0).quality);
+    }
 
 }
