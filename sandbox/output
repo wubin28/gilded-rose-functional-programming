@@ -1,6 +1,6 @@
-JUnit version 4.11-SNAPSHOT-20120416-1530
-................
-Time: 0.085
-
-OK (16 tests)
-
+GildedRoseTest.java:178: error: cannot find symbol
+            .map(GildedRose.generateUpdatedSulfuras());
+                           ^
+  symbol:   method generateUpdatedSulfuras()
+  location: class GildedRose
+1 error
