@@ -32,7 +32,7 @@ public class GildedRoseTest {
         );
 
         items.stream()
-            .filter(GildedRose.isNormalItem())
+            .filter(GildedRose.isNormalItem(item))
             .filter(item -> item.sellIn > 0)
             .map(item -> new Item(item.name, item.sellIn - 1, item.quality - 1));
 

@@ -12,5 +12,10 @@ class GildedRose {
         }
     }
  
-    
+    public static Predicate<Item> isNormalItem(Item item) {
+        item -> !item.name.equals("Aged Brie") && 
+                    !item.name.equals("Sulfuras, Hand of Ragnaros") &&
+                    !item.name.equals("Backstage passes to a TAFKAL80ETC concert") &&
+                    !item.name.equals("Conjured");
+    }
 }
