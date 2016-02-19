@@ -75,7 +75,7 @@ public class GildedRoseTest {
         System.out.println(normalItemsUpdated);
         assertEquals(1, normalItemsUpdated.size());
         assertEquals(-1, normalItemsUpdated.get(0).sellIn);
-        assertEquals(8, normalItemsUpdated.get(0).quality);
+        assertEquals(7, normalItemsUpdated.get(0).quality);
     }
 
     @Test

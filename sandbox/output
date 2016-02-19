@@ -1,12 +1,7 @@
 JUnit version 4.11-SNAPSHOT-20120416-1530
 .......[Normal item old, -1, 7]
-E.........
-Time: 0.078
-There was 1 failure:
-1) normal_item_quality_should_decrease_by_2_if_sellin_no_more_than_0_using_functional_programming(GildedRoseTest)
-java.lang.AssertionError: expected:<8> but was:<7>
-	at GildedRoseTest.normal_item_quality_should_decrease_by_2_if_sellin_no_more_than_0_using_functional_programming(GildedRoseTest.java:78)
+.........
+Time: 0.073
 
-FAILURES!!!
-Tests run: 16,  Failures: 1
+OK (16 tests)
 
