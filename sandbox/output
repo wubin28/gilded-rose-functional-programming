@@ -1,11 +1,12 @@
 JUnit version 4.11-SNAPSHOT-20120416-1530
-............E...........[Sulfuras, Hand of Ragnaros, 2, 80]
-
-Time: 0.18
+.........[Sulfuras, Hand of Ragnaros, 2, 80]
+...........[Backstage passes to a TAFKAL80ETC concert, 10, 32, Backstage passes to a TAFKAL80ETC concert, 9, 31, Backstage passes to a TAFKAL80ETC concert, 4, 30]
+E...
+Time: 0.097
 There was 1 failure:
 1) Conjured_quality_should_decrease_by_2_when_sellin_greater_than_0_using_functional_programming(GildedRoseTest)
 java.lang.AssertionError: expected:<1> but was:<3>
-	at GildedRoseTest.Conjured_quality_should_decrease_by_2_when_sellin_greater_than_0_using_functional_programming(GildedRoseTest.java:414)
+	at GildedRoseTest.Conjured_quality_should_decrease_by_2_when_sellin_greater_than_0_using_functional_programming(GildedRoseTest.java:415)
 
 FAILURES!!!
 Tests run: 23,  Failures: 1
