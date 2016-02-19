@@ -1,6 +1,6 @@
-GildedRoseTest.java:36: error: cannot find symbol
-            .filter(GildedRose.isSellInGreaterThan0())
-                              ^
-  symbol:   method isSellInGreaterThan0()
-  location: class GildedRose
-1 error
+JUnit version 4.11-SNAPSHOT-20120416-1530
+.............
+Time: 0.13
+
+OK (13 tests)
+

@@ -20,4 +20,8 @@ class GildedRose {
                     !item.name.equals("Backstage passes to a TAFKAL80ETC concert") &&
                     !item.name.equals("Conjured");
     }
+
+    public static Predicate<Item> isSellInGreaterThan0() {
+        return item -> item.sellIn > 0;
+    }
 }
