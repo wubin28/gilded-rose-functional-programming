@@ -14,7 +14,7 @@ class GildedRose {
         }
     }
  
-    public static Predicate<Item> isNormalItem(Item item) {
+    public static Predicate<Item> isNormalItem() {
         return item -> !item.name.equals("Aged Brie") && 
                     !item.name.equals("Sulfuras, Hand of Ragnaros") &&
                     !item.name.equals("Backstage passes to a TAFKAL80ETC concert") &&
