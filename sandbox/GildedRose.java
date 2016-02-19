@@ -42,6 +42,10 @@ class GildedRose {
         return item -> item.sellIn <= 0;
     }
 
+    public static Predicate<Item> isSellInGreaterThan10() {
+        return item -> item.sellIn > 10;
+    }
+
     public static Function<Item, Item> generateUpdatedNormalItems() {
         return item -> {
             int updatedQuality = item.quality;
