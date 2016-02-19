@@ -73,8 +73,8 @@ public class GildedRoseTest {
         List<Item> normalItemsUpdated = normalItemStream.collect(Collectors.toList());
 
         assertEquals(1, normalItemsUpdated.size());
-        assertEquals(0, normalItemsUpdated.get(0).sellIn);
-        assertEquals(9, normalItemsUpdated.get(0).quality);
+        assertEquals(-1, normalItemsUpdated.get(0).sellIn);
+        assertEquals(8, normalItemsUpdated.get(0).quality);
     }
 
 
