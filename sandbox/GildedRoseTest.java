@@ -179,7 +179,6 @@ public class GildedRoseTest {
 
         List<Item> itemsUpdated = itemStream.collect(Collectors.toList());
 
-        System.out.println(itemsUpdated);
         assertEquals(1, itemsUpdated.size());
         assertEquals(2, itemsUpdated.get(0).sellIn);
         assertEquals(80, itemsUpdated.get(0).quality);
@@ -411,7 +410,6 @@ public class GildedRoseTest {
 
         List<Item> itemsUpdated = itemStream.collect(Collectors.toList());
 
-        System.out.println(itemsUpdated);
         assertEquals(1, itemsUpdated.size());
         assertEquals(0, itemsUpdated.get(0).sellIn);
         assertEquals(43, itemsUpdated.get(0).quality);
