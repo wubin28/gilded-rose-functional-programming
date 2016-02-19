@@ -1,7 +1,13 @@
 JUnit version 4.11-SNAPSHOT-20120416-1530
-.................[Sulfuras, Hand of Ragnaros, 2, 80]
+...[]
+E...............[Sulfuras, Hand of Ragnaros, 2, 80]
 
-Time: 0.089
+Time: 0.087
+There was 1 failure:
+1) Sulfuras_quality_should_always_80_when_sellin_no_more_than_0_using_functional_programming(GildedRoseTest)
+java.lang.AssertionError: expected:<1> but was:<0>
+	at GildedRoseTest.Sulfuras_quality_should_always_80_when_sellin_no_more_than_0_using_functional_programming(GildedRoseTest.java:220)
 
-OK (17 tests)
+FAILURES!!!
+Tests run: 18,  Failures: 1
 

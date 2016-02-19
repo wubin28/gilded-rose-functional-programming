@@ -198,6 +198,31 @@ public class GildedRoseTest {
     }
 
     @Test
+    public void Sulfuras_quality_should_always_80_when_sellin_no_more_than_0_using_functional_programming() {
+          List<Item> items = Arrays.asList(
+            new Item("Normal item", 1, 10),
+            new Item("Normal item", 0, 10),
+            new Item("Aged Brie", 1, 5),
+            new Item("Aged Brie", 0, 6),
+            new Item("Backstage passes to a TAFKAL80ETC concert", 22, 35),
+            new Item("Sulfuras, Hand of Ragnaros", 0, 80),
+            new Item("Conjured", 12, 45)
+        );
+
+        Stream<Item> normalItemStream = items.stream()
+            .filter(GildedRose.isSulfuras())
+            .filter(GildedRose.isSellInGreaterThan0())
+            .map(GildedRose.generateUpdatedSulfuras());
+
+        List<Item> normalItemsUpdated = normalItemStream.collect(Collectors.toList());
+
+        System.out.println(normalItemsUpdated);
+        assertEquals(1, normalItemsUpdated.size());
+        assertEquals(0, normalItemsUpdated.get(0).sellIn);
+        assertEquals(80, normalItemsUpdated.get(0).quality);
+    }
+
+    @Test
     public void Passes_quality_should_equal_0_when_sellin_no_more_than_0() {
         Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", -3, 30) };
         GildedRose app = new GildedRose(items);
