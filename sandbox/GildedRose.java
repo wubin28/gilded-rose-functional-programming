@@ -36,7 +36,7 @@ class GildedRose {
 
     public static Function<Item, Item> generateUpdatedNormalItems() {
         return item -> {
-            int updatedQuality = 0;
+            int updatedQuality = item.quality;
 
             if (item.quality > 0) {                    
                 updatedQuality = item.quality - 1;
