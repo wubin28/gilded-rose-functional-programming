@@ -173,7 +173,7 @@ public class GildedRoseTest {
         );
 
         Stream<Item> normalItemStream = items.stream()
-            .filter(GildedRose.isAgedBrie())
+            .filter(GildedRose.isSulfuras())
             .filter(GildedRose.isSellInGreaterThan0())
             .map(GildedRose.generateUpdatedSulfuras());
 
