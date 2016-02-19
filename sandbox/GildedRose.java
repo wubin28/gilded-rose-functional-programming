@@ -26,7 +26,7 @@ class GildedRose {
         return item -> item.sellIn > 0;
     }
 
-    public static Function<Item, Item> generateNormalItemsForSellByDateNotPassed() {
+    public static Function<Item, Item> generateNormalItemsForSellInGreaterThan0() {
         return item -> 
             new Item(item.name, item.sellIn - 1, item.quality - 1);
     }
