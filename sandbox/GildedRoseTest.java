@@ -289,7 +289,7 @@ public class GildedRoseTest {
 
         Stream<Item> itemStream = items.stream()
             .filter(GildedRose.isBackstagePasses())
-            .filter(GildedRose.isSellInGreaterThan0())
+            .filter(GildedRose.isSellInGreaterThan10())
             .map(GildedRose.generateUpdatedBackstagePasses());
 
         List<Item> itemsUpdated = itemStream.collect(Collectors.toList());
