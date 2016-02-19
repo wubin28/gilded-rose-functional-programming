@@ -87,4 +87,32 @@ class GildedRose {
     public static Function<Item, Item> generateUpdatedSulfuras() {
         return item -> item;
     }
+
+    public static Function<Item, Item> generateUpdatedBackstagePasses() {
+        return item -> {
+            int updatedQuality = item.quality;
+
+            if (item.quality < 50) {                    
+                updatedQuality = item.quality + 1;
+                if (item.sellIn < 11) {
+                    if (item.quality < 50) {
+                    updatedQuality = item.quality + 2;
+                    }
+                }
+                if (item.sellIn < 6) {
+                    if (item.quality < 50) {
+                    updatedQuality = item.quality + 3;
+                    }
+                }
+            }
+
+            int updatedSellIn = item.sellIn - 1;
+
+            if (updatedSellIn < 0) {
+                updatedQuality = 0;
+            }
+
+            return new Item(item.name, updatedSellIn, updatedQuality);
+        };
+    }
 }
