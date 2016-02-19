@@ -1,11 +1,6 @@
-GildedRoseTest.java:71: error: cannot find symbol
-            .map(GildedRose.generateNormalItemsForSellInNoMoreThan0());
-                           ^
-  symbol:   method generateNormalItemsForSellInNoMoreThan0()
-  location: class GildedRose
 GildedRoseTest.java:70: error: cannot find symbol
             .filter(GildedRose.isSellInNoMoreThan0())
                               ^
   symbol:   method isSellInNoMoreThan0()
   location: class GildedRose
-2 errors
+1 error

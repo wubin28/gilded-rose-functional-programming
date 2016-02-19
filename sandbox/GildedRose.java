@@ -30,4 +30,9 @@ class GildedRose {
         return item -> 
             new Item(item.name, item.sellIn - 1, item.quality - 1);
     }
+
+    public static Function<Item, Item> generateNormalItemsForSellInNoMoreThan0() {
+        return item -> 
+            new Item(item.name, item.sellIn - 1, item.quality - 2);
+    }
 }
