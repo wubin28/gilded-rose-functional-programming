@@ -1,6 +1,6 @@
-GildedRoseTest.java:104: error: cannot find symbol
-            .filter(GildedRose.isAgedBrie())
-                              ^
-  symbol:   method isAgedBrie()
-  location: class GildedRose
-1 error
+JUnit version 4.11-SNAPSHOT-20120416-1530
+...............
+Time: 0.096
+
+OK (15 tests)
+
