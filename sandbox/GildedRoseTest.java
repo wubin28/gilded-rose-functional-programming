@@ -31,6 +31,11 @@ public class GildedRoseTest {
             new Item("Conjured", 12, 45)
         );
 
+        items.stream()
+            .filter(GildedRose.isNormalItem())
+            .filter(item -> item.sellIn > 0)
+            .map(item -> new Item(item.name, item.sellIn - 1, item.quality - 1));
+
         Stream<Item> normalItemStream = items.stream()
                 .filter(item -> !item.name.equals("Aged Brie") && 
                     !item.name.equals("Sulfuras, Hand of Ragnaros") &&

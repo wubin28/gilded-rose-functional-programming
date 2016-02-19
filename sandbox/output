@@ -1,6 +1,6 @@
-JUnit version 4.11-SNAPSHOT-20120416-1530
-.............
-Time: 0.085
-
-OK (13 tests)
-
+GildedRoseTest.java:35: error: cannot find symbol
+            .filter(GildedRose.isNormalItem())
+                              ^
+  symbol:   method isNormalItem()
+  location: class GildedRose
+1 error
