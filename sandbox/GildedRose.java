@@ -52,7 +52,7 @@ class GildedRose {
             }
             
             return new Item(item.name, updatedSellIn, updatedQuality);
-        }
+        };
     }
 
     public static Function<Item, Item> generateAgedBrieForSellInGreaterThan0() {
