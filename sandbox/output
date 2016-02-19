@@ -1,4 +1,11 @@
-GildedRose.java:16: error: not a statement
-        item -> !item.name.equals("Aged Brie") && 
-        ^
-1 error
+GildedRose.java:15: error: cannot find symbol
+    public static Predicate<Item> isNormalItem(Item item) {
+                  ^
+  symbol:   class Predicate
+  location: class GildedRose
+GildedRoseTest.java:35: error: cannot find symbol
+            .filter(GildedRose.isNormalItem(item))
+                                            ^
+  symbol:   variable item
+  location: class GildedRoseTest
+2 errors
