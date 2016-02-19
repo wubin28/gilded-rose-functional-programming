@@ -405,7 +405,7 @@ public class GildedRoseTest {
         );
 
         Stream<Item> itemStream = items.stream()
-            .filter(GildedRose.isBackstagePasses())
+            .filter(GildedRose.isConjured())
             .filter(GildedRose.isSellInGreaterThan0())
             .map(GildedRose.generateUpdatedConjured());
 
