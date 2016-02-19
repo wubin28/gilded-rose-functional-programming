@@ -127,4 +127,24 @@ class GildedRose {
             return new Item(item.name, updatedSellIn, updatedQuality);
         };
     }
+
+    public static Function<Item, Item> generateUpdatedConjured() {
+        return item -> {
+            int updatedQuality = item.quality;
+
+            if (item.quality > 0) {                    
+                updatedQuality = item.quality - 2;
+            }
+
+            int updatedSellIn = item.sellIn - 1;
+
+            if (updatedSellIn < 0) {
+                if (updatedQuality > 0) {  
+                    updatedQuality = item.quality - 4;
+                }
+            }
+
+            return new Item(item.name, updatedSellIn, updatedQuality);
+        };
+    }
 }
