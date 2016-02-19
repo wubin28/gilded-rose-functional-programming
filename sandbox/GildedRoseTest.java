@@ -103,7 +103,7 @@ public class GildedRoseTest {
         Stream<Item> normalItemStream = items.stream()
             .filter(GildedRose.isAgedBrie())
             .filter(GildedRose.isSellInGreaterThan0())
-            .map(GildedRose.generateAgedBrieForSellInGreaterThan0());
+            .map(GildedRose.generateUpdatedAgedBrie());
 
         List<Item> normalItemsUpdated = normalItemStream.collect(Collectors.toList());
 
@@ -139,13 +139,13 @@ public class GildedRoseTest {
         Stream<Item> normalItemStream = items.stream()
             .filter(GildedRose.isAgedBrie())
             .filter(GildedRose.isSellInGreaterThan0())
-            .map(GildedRose.generateAgedBrieForSellInGreaterThan0());
+            .map(GildedRose.generateUpdatedAgedBrie());
 
         List<Item> normalItemsUpdated = normalItemStream.collect(Collectors.toList());
 
         assertEquals(1, normalItemsUpdated.size());
-        assertEquals(0, normalItemsUpdated.get(0).sellIn);
-        assertEquals(6, normalItemsUpdated.get(0).quality);
+        assertEquals(-1, normalItemsUpdated.get(0).sellIn);
+        assertEquals(8, normalItemsUpdated.get(0).quality);
     }
 
     @Test
