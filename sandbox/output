@@ -1,6 +1,7 @@
-GildedRoseTest.java:176: error: cannot find symbol
-            .filter(GildedRose.isSulfuras())
-                              ^
-  symbol:   method isSulfuras()
-  location: class GildedRose
-1 error
+JUnit version 4.11-SNAPSHOT-20120416-1530
+.................[Sulfuras, Hand of Ragnaros, 2, 80]
+
+Time: 0.089
+
+OK (17 tests)
+

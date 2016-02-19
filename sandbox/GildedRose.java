@@ -26,6 +26,10 @@ class GildedRose {
         return item -> item.name.equals("Aged Brie");
     }
 
+    public static Predicate<Item> isSulfuras() {
+        return item -> item.name.equals("Sulfuras, Hand of Ragnaros");
+    }
+
     public static Predicate<Item> isSellInGreaterThan0() {
         return item -> item.sellIn > 0;
     }
