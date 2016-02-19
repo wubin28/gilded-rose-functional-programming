@@ -1,4 +1,5 @@
 import java.util.function.Predicate;
+import java.util.function.Function;
 
 class GildedRose {
     Item[] items;
