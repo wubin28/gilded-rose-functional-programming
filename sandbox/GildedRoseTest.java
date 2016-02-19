@@ -21,8 +21,7 @@ public class GildedRoseTest {
 
     @Test
     public void normal_item_quality_should_decrease_by_1_if_sellin_greater_than_0_using_functional_programming() {
-  
-        List<Item> items = Arrays.asList(
+          List<Item> items = Arrays.asList(
             new Item("Normal item", 1, 10),
             new Item("Normal item", 0, 10),
             new Item("Aged Brie", 2, 5),
@@ -34,7 +33,7 @@ public class GildedRoseTest {
         Stream<Item> normalItemStream = items.stream()
             .filter(GildedRose.isNormalItem())
             .filter(GildedRose.isSellInGreaterThan0())
-            .map(GildedRose.generateNormalItemsForSellByDateNotPassed());
+            .map(GildedRose.generateNormalItemsForSellInGreaterThan0());
 
         List<Item> normalItemsUpdated = normalItemStream.collect(Collectors.toList());
 
@@ -53,6 +52,29 @@ public class GildedRoseTest {
         assertEquals("Normal item", app.items[0].name);
         assertEquals(-1, app.items[0].sellIn);
         assertEquals(8, app.items[0].quality);
+    }
+
+    @Test
+    public void normal_item_quality_should_decrease_by_2_if_sellin_no_more_than_0_using_functional_programming() {
+          List<Item> items = Arrays.asList(
+            new Item("Normal item", 1, 10),
+            new Item("Normal item", 0, 10),
+            new Item("Aged Brie", 2, 5),
+            new Item("Backstage passes to a TAFKAL80ETC concert", 22, 35),
+            new Item("Sulfuras, Hand of Ragnaros", 9, 80),
+            new Item("Conjured", 12, 45)
+        );
+
+        Stream<Item> normalItemStream = items.stream()
+            .filter(GildedRose.isNormalItem())
+            .filter(GildedRose.isSellInNoMoreThan0())
+            .map(GildedRose.generateNormalItemsForSellInNoMoreThan0());
+
+        List<Item> normalItemsUpdated = normalItemStream.collect(Collectors.toList());
+
+        assertEquals(1, normalItemsUpdated.size());
+        assertEquals(0, normalItemsUpdated.get(0).sellIn);
+        assertEquals(9, normalItemsUpdated.get(0).quality);
     }
 
 
