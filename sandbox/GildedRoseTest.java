@@ -138,7 +138,7 @@ public class GildedRoseTest {
 
         Stream<Item> normalItemStream = items.stream()
             .filter(GildedRose.isAgedBrie())
-            .filter(GildedRose.isSellInGreaterThan0())
+            .filter(GildedRose.isSellInNoMoreThan0())
             .map(GildedRose.generateUpdatedAgedBrie());
 
         List<Item> normalItemsUpdated = normalItemStream.collect(Collectors.toList());

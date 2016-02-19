@@ -1,11 +1,6 @@
 JUnit version 4.11-SNAPSHOT-20120416-1530
-...............E.
-Time: 0.078
-There was 1 failure:
-1) Aged_Brie_quality_should_increase_by_2_if_sellin_no_more_than_0_using_functional_programming(GildedRoseTest)
-java.lang.AssertionError: expected:<-1> but was:<0>
-	at GildedRoseTest.Aged_Brie_quality_should_increase_by_2_if_sellin_no_more_than_0_using_functional_programming(GildedRoseTest.java:147)
+................
+Time: 0.085
 
-FAILURES!!!
-Tests run: 16,  Failures: 1
+OK (16 tests)
 
