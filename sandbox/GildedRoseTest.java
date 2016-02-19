@@ -57,8 +57,8 @@ public class GildedRoseTest {
     @Test
     public void normal_item_quality_should_decrease_by_2_if_sellin_no_more_than_0_using_functional_programming() {
           List<Item> items = Arrays.asList(
-            new Item("Normal item", 1, 10),
-            new Item("Normal item", 0, 10),
+            new Item("Normal item new", 1, 10),
+            new Item("Normal item old", 0, 10),
             new Item("Aged Brie", 2, 5),
             new Item("Backstage passes to a TAFKAL80ETC concert", 22, 35),
             new Item("Sulfuras, Hand of Ragnaros", 9, 80),
