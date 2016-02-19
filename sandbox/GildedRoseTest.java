@@ -222,7 +222,7 @@ public class GildedRoseTest {
     }
 
     @Test
-    public void Passes_quality_should_equal_0_when_sellin_no_more_than_0() {
+    public void Backstage_Passes_quality_should_equal_0_when_sellin_no_more_than_0() {
         Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", -3, 30) };
         GildedRose app = new GildedRose(items);
 
@@ -234,7 +234,7 @@ public class GildedRoseTest {
     }
 
     @Test
-    public void Passes_quality_should_increase_by_1_when_sellin_greater_than_10() {
+    public void Backstage_Passes_quality_should_increase_by_1_when_sellin_greater_than_10() {
         Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 11, 22) };
         GildedRose app = new GildedRose(items);
 
@@ -246,7 +246,7 @@ public class GildedRoseTest {
     }
 
     @Test
-    public void Passes_quality_should_increase_by_2_when_sellin_between_5_and_10() {
+    public void Backstage_Passes_quality_should_increase_by_2_when_sellin_between_5_and_10() {
         Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 10, 22) };
         GildedRose app = new GildedRose(items);
 
@@ -258,7 +258,7 @@ public class GildedRoseTest {
     }
 
     @Test
-    public void Passes_quality_should_increase_by_3_when_sellin_between_0_and_5() {
+    public void Backstage_Passes_quality_should_increase_by_3_when_sellin_between_0_and_5() {
         Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 5, 22) };
         GildedRose app = new GildedRose(items);
 
