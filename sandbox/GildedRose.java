@@ -30,6 +30,10 @@ class GildedRose {
         return item -> item.name.equals("Sulfuras, Hand of Ragnaros");
     }
 
+    public static Predicate<Item> isBackstagePasses() {
+        return item -> item.name.equals("Backstage passes to a TAFKAL80ETC concert");
+    }
+
     public static Predicate<Item> isSellInGreaterThan0() {
         return item -> item.sellIn > 0;
     }
