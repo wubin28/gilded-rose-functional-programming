@@ -351,6 +351,33 @@ public class GildedRoseTest {
     }
 
     @Test
+    public void Backstage_Passes_quality_should_increase_by_3_when_sellin_between_0_and_5_using_functional_programming() {
+          List<Item> items = Arrays.asList(
+            new Item("Normal item", 1, 10),
+            new Item("Normal item", 0, 10),
+            new Item("Aged Brie", 1, 5),
+            new Item("Aged Brie", 0, 6),
+            new Item("Backstage passes to a TAFKAL80ETC concert", 0, 35),
+            new Item("Backstage passes to a TAFKAL80ETC concert", 11, 34),
+            new Item("Backstage passes to a TAFKAL80ETC concert", 10, 33),
+            new Item("Backstage passes to a TAFKAL80ETC concert", 5, 32),
+            new Item("Sulfuras, Hand of Ragnaros", 0, 80),
+            new Item("Conjured", 12, 45)
+        );
+
+        Stream<Item> itemStream = items.stream()
+            .filter(GildedRose.isBackstagePasses())
+            .filter(GildedRose.isSellInBetween0And5())
+            .map(GildedRose.generateUpdatedBackstagePasses());
+
+        List<Item> itemsUpdated = itemStream.collect(Collectors.toList());
+
+        assertEquals(1, itemsUpdated.size());
+        assertEquals(4, itemsUpdated.get(0).sellIn);
+        assertEquals(35, itemsUpdated.get(0).quality);
+    }
+
+    @Test
     public void Conjured_quality_should_decrease_by_2_when_sellin_greater_than_0() {
         Item[] items = new Item[] { new Item("Conjured", 5, 22) };
         GildedRose app = new GildedRose(items);
