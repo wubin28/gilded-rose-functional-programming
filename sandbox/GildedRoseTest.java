@@ -33,7 +33,7 @@ public class GildedRoseTest {
         Stream<Item> normalItemStream = items.stream()
             .filter(GildedRose.isNormalItem())
             .filter(GildedRose.isSellInGreaterThan0())
-            .map(GildedRose.generateNormalItemsForSellInGreaterThan0());
+            .map(GildedRose.generateUpdatedNormalItems());
 
         List<Item> normalItemsUpdated = normalItemStream.collect(Collectors.toList());
 
@@ -68,7 +68,7 @@ public class GildedRoseTest {
         Stream<Item> normalItemStream = items.stream()
             .filter(GildedRose.isNormalItem())
             .filter(GildedRose.isSellInNoMoreThan0())
-            .map(GildedRose.generateNormalItemsForSellInNoMoreThan0());
+            .map(GildedRose.generateUpdatedNormalItems());
 
         List<Item> normalItemsUpdated = normalItemStream.collect(Collectors.toList());
 
@@ -122,6 +122,30 @@ public class GildedRoseTest {
         assertEquals("Aged Brie", app.items[0].name);
         assertEquals(-1, app.items[0].sellIn);
         assertEquals(12, app.items[0].quality);
+    }
+
+    @Test
+    public void Aged_Brie_quality_should_increase_by_2_if_sellin_no_more_than_0_using_functional_programming() {
+          List<Item> items = Arrays.asList(
+            new Item("Normal item", 1, 10),
+            new Item("Normal item", 0, 10),
+            new Item("Aged Brie", 1, 5),
+            new Item("Aged Brie", 0, 6),
+            new Item("Backstage passes to a TAFKAL80ETC concert", 22, 35),
+            new Item("Sulfuras, Hand of Ragnaros", 9, 80),
+            new Item("Conjured", 12, 45)
+        );
+
+        Stream<Item> normalItemStream = items.stream()
+            .filter(GildedRose.isAgedBrie())
+            .filter(GildedRose.isSellInGreaterThan0())
+            .map(GildedRose.generateAgedBrieForSellInGreaterThan0());
+
+        List<Item> normalItemsUpdated = normalItemStream.collect(Collectors.toList());
+
+        assertEquals(1, normalItemsUpdated.size());
+        assertEquals(0, normalItemsUpdated.get(0).sellIn);
+        assertEquals(6, normalItemsUpdated.get(0).quality);
     }
 
     @Test
