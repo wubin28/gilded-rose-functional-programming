@@ -1,7 +1,6 @@
-JUnit version 4.11-SNAPSHOT-20120416-1530
-......................[Sulfuras, Hand of Ragnaros, 2, 80]
-
-Time: 0.09
-
-OK (22 tests)
-
+GildedRoseTest.java:410: error: cannot find symbol
+            .map(GildedRose.generateUpdatedConjured());
+                           ^
+  symbol:   method generateUpdatedConjured()
+  location: class GildedRose
+1 error
