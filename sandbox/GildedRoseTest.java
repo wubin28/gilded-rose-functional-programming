@@ -444,7 +444,7 @@ public class GildedRoseTest {
 
         Stream<Item> itemStream = items.stream()
             .filter(GildedRose.isConjured())
-            .filter(GildedRose.isSellInGreaterThan0())
+            .filter(GildedRose.isSellInNoMoreThan0())
             .map(GildedRose.generateUpdatedConjured());
 
         List<Item> itemsUpdated = itemStream.collect(Collectors.toList());
