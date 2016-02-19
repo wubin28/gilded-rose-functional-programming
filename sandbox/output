@@ -1,8 +1,6 @@
-GildedRose.java:15: error: cannot find symbol
-    public static Predicate<Item> isNormalItem(Item item) {
-                  ^
-  symbol:   class Predicate
-  location: class GildedRose
+GildedRose.java:18: error: variable item is already defined in method isNormalItem(Item)
+        return item -> !item.name.equals("Aged Brie") && 
+               ^
 GildedRoseTest.java:35: error: cannot find symbol
             .filter(GildedRose.isNormalItem(item))
                                             ^
