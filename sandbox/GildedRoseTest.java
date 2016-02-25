@@ -393,12 +393,11 @@ public class GildedRoseTest {
             new Item("Conjured", 1, 45)
         );
 
-        Stream<Item> itemStream = items.stream()
-            .filter(GildedRose.isConjured())
-            .filter(GildedRose.isSellInGreaterThan0())
-            .map(GildedRose.generateUpdatedConjured());
-
-        List<Item> itemsUpdated = itemStream.collect(Collectors.toList());
+        List<Item> itemsUpdated = 
+            GildedRose.updateItemsQualityAndSellIn(items, 
+                GildedRose.isConjured(), 
+                GildedRose.isSellInGreaterThan0(),
+                GildedRose.generateUpdatedConjured());
 
         assertEquals(1, itemsUpdated.size());
         assertEquals(0, itemsUpdated.get(0).sellIn);
