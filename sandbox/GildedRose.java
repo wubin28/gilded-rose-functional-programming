@@ -151,4 +151,8 @@ class GildedRose {
             return new Item(item.name, updatedSellIn, updatedQuality);
         };
     }
+
+    public static List<Item> updateItemsQualityAndSellIn(List<Item> items) {
+        return null;
+    }
 }

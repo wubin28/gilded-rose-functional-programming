@@ -1,6 +1,11 @@
-GildedRoseTest.java:42: error: cannot find symbol
-            GildedRose.updateItemsQualityAndSellIn(items);
-                      ^
-  symbol:   method updateItemsQualityAndSellIn(List<Item>)
+GildedRose.java:155: error: cannot find symbol
+    public static List<Item> updateItemsQualityAndSellIn(List<Item> items) {
+                                                         ^
+  symbol:   class List
   location: class GildedRose
-1 error
+GildedRose.java:155: error: cannot find symbol
+    public static List<Item> updateItemsQualityAndSellIn(List<Item> items) {
+                  ^
+  symbol:   class List
+  location: class GildedRose
+2 errors
