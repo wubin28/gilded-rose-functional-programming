@@ -64,12 +64,11 @@ public class GildedRoseTest {
             new Item("Conjured", 12, 45)
         );
 
-        Stream<Item> itemStream = items.stream()
-            .filter(GildedRose.isNormalItem())
-            .filter(GildedRose.isSellInNoMoreThan0())
-            .map(GildedRose.generateUpdatedNormalItems());
-
-        List<Item> itemsUpdated = itemStream.collect(Collectors.toList());
+        List<Item> itemsUpdated = 
+            GildedRose.updateItemsQualityAndSellIn(items, 
+                GildedRose.isNormalItem(), 
+                GildedRose.isSellInNoMoreThan0(),
+                GildedRose.generateUpdatedNormalItems());
 
         assertEquals(1, itemsUpdated.size());
         assertEquals(-1, itemsUpdated.get(0).sellIn);
