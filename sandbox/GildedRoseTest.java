@@ -140,6 +140,12 @@ public class GildedRoseTest {
 
         List<Item> itemsUpdated = itemStream.collect(Collectors.toList());
 
+        List<Item> itemsUpdated = 
+            GildedRose.updateItemsQualityAndSellIn(items, 
+                GildedRose.isAgedBrie(), 
+                GildedRose.isSellInNoMoreThan0(),
+                GildedRose.generateUpdatedAgedBrie());
+
         assertEquals(1, itemsUpdated.size());
         assertEquals(-1, itemsUpdated.get(0).sellIn);
         assertEquals(8, itemsUpdated.get(0).quality);
