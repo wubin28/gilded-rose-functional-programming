@@ -30,15 +30,7 @@ public class GildedRoseTest {
             new Item("Conjured", 12, 45)
         );
 
-        Stream<Item> updatedItemStream = items.stream()
-            .filter(GildedRose.isNormalItem())
-            .filter(GildedRose.isSellInGreaterThan0())
-            .map(GildedRose.generateUpdatedNormalItems());
-
         List<Item> itemsUpdated = 
-            updatedItemStream.collect(Collectors.toList());
-
-        List<Item> anotherItemsUpdated = 
             GildedRose.updateItemsQualityAndSellIn(items, 
                 GildedRose.isNormalItem(), 
                 GildedRose.isSellInGreaterThan0(),
