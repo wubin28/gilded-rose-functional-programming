@@ -355,12 +355,11 @@ public class GildedRoseTest {
             new Item("Conjured", 12, 45)
         );
 
-        Stream<Item> itemStream = items.stream()
-            .filter(GildedRose.isBackstagePasses())
-            .filter(GildedRose.isSellInBetween0And5())
-            .map(GildedRose.generateUpdatedBackstagePasses());
-
-        List<Item> itemsUpdated = itemStream.collect(Collectors.toList());
+        List<Item> itemsUpdated = 
+            GildedRose.updateItemsQualityAndSellIn(items, 
+                GildedRose.isBackstagePasses(), 
+                GildedRose.isSellInBetween0And5(),
+                GildedRose.generateUpdatedBackstagePasses());
 
         assertEquals(1, itemsUpdated.size());
         assertEquals(4, itemsUpdated.get(0).sellIn);
