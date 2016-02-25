@@ -1,4 +1,6 @@
-GildedRoseTest.java:143: error: variable itemsUpdated is already defined in method Aged_Brie_quality_should_increase_by_2_if_sellin_no_more_than_0_using_functional_programming()
-        List<Item> itemsUpdated = 
-                   ^
-1 error
+JUnit version 4.11-SNAPSHOT-20120416-1530
+........................
+Time: 0.09
+
+OK (24 tests)
+
