@@ -159,9 +159,9 @@ class GildedRose {
             Predicate<Item> sellInFilter,
             Function<Item,Item> updateQualityAndSellIn) {
         return items.stream()
-            .filter(GildedRose.isNormalItem())
-            .filter(GildedRose.isSellInGreaterThan0())
-            .map(GildedRose.generateUpdatedNormalItems())
+            .filter(itemTypeFilter)
+            .filter(sellInFilter)
+            .map(updateQualityAndSellIn)
             .collect(Collectors.toList());
     }
 }
