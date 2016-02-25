@@ -1,11 +1,6 @@
-GildedRose.java:155: error: cannot find symbol
-    public static List<Item> updateItemsQualityAndSellIn(List<Item> items) {
-                                                         ^
-  symbol:   class List
-  location: class GildedRose
-GildedRose.java:155: error: cannot find symbol
-    public static List<Item> updateItemsQualityAndSellIn(List<Item> items) {
-                  ^
-  symbol:   class List
-  location: class GildedRose
-2 errors
+JUnit version 4.11-SNAPSHOT-20120416-1530
+........................
+Time: 0.098
+
+OK (24 tests)
+
