@@ -38,6 +38,9 @@ public class GildedRoseTest {
         List<Item> itemsUpdated = 
             updatedItemStream.collect(Collectors.toList());
 
+        List<Item> anotherItemsUpdated = 
+            GildedRose.updateItemsQualityAndSellIn(items);
+
         assertEquals(1, itemsUpdated.size());
         assertEquals(0, itemsUpdated.get(0).sellIn);
         assertEquals(9, itemsUpdated.get(0).quality);
