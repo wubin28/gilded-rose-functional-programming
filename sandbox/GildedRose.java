@@ -153,7 +153,10 @@ class GildedRose {
         };
     }
 
-    public static List<Item> updateItemsQualityAndSellIn(List<Item> items) {
+    public static List<Item> updateItemsQualityAndSellIn(
+            List<Item> items, Predicate<Item> itemTypeFilter, 
+            Predicate<Item> sellInFilter,
+            Function<Item,Item> updateQualityAndSellIn) {
         return null;
     }
 }
