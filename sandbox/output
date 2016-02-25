@@ -1,6 +1,7 @@
-JUnit version 4.11-SNAPSHOT-20120416-1530
-........................
-Time: 0.098
-
-OK (24 tests)
-
+GildedRoseTest.java:42: error: method updateItemsQualityAndSellIn in class GildedRose cannot be applied to given types;
+            GildedRose.updateItemsQualityAndSellIn(items, 
+                      ^
+  required: List<Item>
+  found: List<Item>,Predicate<Item>,Predicate<Item>,Function<Item,Item>
+  reason: actual and formal argument lists differ in length
+1 error

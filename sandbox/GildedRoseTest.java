@@ -39,7 +39,10 @@ public class GildedRoseTest {
             updatedItemStream.collect(Collectors.toList());
 
         List<Item> anotherItemsUpdated = 
-            GildedRose.updateItemsQualityAndSellIn(items);
+            GildedRose.updateItemsQualityAndSellIn(items, 
+                GildedRose.isNormalItem(), 
+                GildedRose.isSellInGreaterThan0(),
+                GildedRose.generateUpdatedNormalItems());
 
         assertEquals(1, itemsUpdated.size());
         assertEquals(0, itemsUpdated.get(0).sellIn);
