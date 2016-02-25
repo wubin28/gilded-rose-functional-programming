@@ -203,12 +203,11 @@ public class GildedRoseTest {
             new Item("Conjured", 12, 45)
         );
 
-        Stream<Item> itemStream = items.stream()
-            .filter(GildedRose.isSulfuras())
-            .filter(GildedRose.isSellInNoMoreThan0())
-            .map(GildedRose.generateUpdatedSulfuras());
-
-        List<Item> itemsUpdated = itemStream.collect(Collectors.toList());
+        List<Item> itemsUpdated = 
+            GildedRose.updateItemsQualityAndSellIn(items, 
+                GildedRose.isSulfuras(), 
+                GildedRose.isSellInNoMoreThan0(),
+                GildedRose.generateUpdatedSulfuras());
 
         assertEquals(1, itemsUpdated.size());
         assertEquals(0, itemsUpdated.get(0).sellIn);
