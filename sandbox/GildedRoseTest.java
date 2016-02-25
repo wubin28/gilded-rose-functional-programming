@@ -100,7 +100,7 @@ public class GildedRoseTest {
 
         List<Item> itemsUpdated = 
             GildedRose.updateItemsQualityAndSellIn(items, 
-                GildedRose.GildedRose.isAgedBrie(), 
+                GildedRose.isAgedBrie(), 
                 GildedRose.isSellInGreaterThan0(),
                 GildedRose.generateUpdatedAgedBrie());
 
