@@ -243,7 +243,7 @@ public class GildedRoseTest {
 
         List<Item> itemsUpdated = 
             GildedRose.updateItemsQualityAndSellIn(items, 
-                GildedRose.isBackstagePasses(), 
+                item -> item.name.equals("Backstage passes to a TAFKAL80ETC concert"), 
                 item -> item.sellIn <= 0,
                 GildedRose.generateUpdatedBackstagePasses());
 
@@ -281,7 +281,7 @@ public class GildedRoseTest {
 
         List<Item> itemsUpdated = 
             GildedRose.updateItemsQualityAndSellIn(items, 
-                GildedRose.isBackstagePasses(), 
+                item -> item.name.equals("Backstage passes to a TAFKAL80ETC concert"), 
                 GildedRose.isSellInGreaterThan10(),
                 GildedRose.generateUpdatedBackstagePasses());
 
@@ -319,7 +319,7 @@ public class GildedRoseTest {
 
         List<Item> itemsUpdated = 
             GildedRose.updateItemsQualityAndSellIn(items, 
-                GildedRose.isBackstagePasses(), 
+                item -> item.name.equals("Backstage passes to a TAFKAL80ETC concert"), 
                 GildedRose.isSellInBetween5And10(),
                 GildedRose.generateUpdatedBackstagePasses());
 
@@ -357,7 +357,7 @@ public class GildedRoseTest {
 
         List<Item> itemsUpdated = 
             GildedRose.updateItemsQualityAndSellIn(items, 
-                GildedRose.isBackstagePasses(), 
+                item -> item.name.equals("Backstage passes to a TAFKAL80ETC concert"), 
                 GildedRose.isSellInBetween0And5(),
                 GildedRose.generateUpdatedBackstagePasses());
 
