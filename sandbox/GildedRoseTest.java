@@ -33,7 +33,7 @@ public class GildedRoseTest {
         List<Item> itemsUpdated = 
             GildedRose.updateItemsQualityAndSellIn(items, 
                 GildedRose.isNormalItem(), 
-                GildedRose.isSellInGreaterThan0(),
+                item -> item.sellIn > 0,
                 GildedRose.generateUpdatedNormalItems());
 
         assertEquals(1, itemsUpdated.size());
