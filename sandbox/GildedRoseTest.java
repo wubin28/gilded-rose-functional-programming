@@ -67,7 +67,7 @@ public class GildedRoseTest {
         List<Item> itemsUpdated = 
             GildedRose.updateItemsQualityAndSellIn(items, 
                 GildedRose.isNormalItem(), 
-                GildedRose.isSellInNoMoreThan0(),
+                return item -> item.sellIn <= 0,
                 GildedRose.generateUpdatedNormalItem());
 
         assertEquals(1, itemsUpdated.size());
@@ -136,7 +136,7 @@ public class GildedRoseTest {
         List<Item> itemsUpdated = 
             GildedRose.updateItemsQualityAndSellIn(items, 
                 GildedRose.isAgedBrie(), 
-                GildedRose.isSellInNoMoreThan0(),
+                return item -> item.sellIn <= 0,
                 GildedRose.generateUpdatedAgedBrie());
 
         assertEquals(1, itemsUpdated.size());
@@ -206,7 +206,7 @@ public class GildedRoseTest {
         List<Item> itemsUpdated = 
             GildedRose.updateItemsQualityAndSellIn(items, 
                 GildedRose.isSulfuras(), 
-                GildedRose.isSellInNoMoreThan0(),
+                return item -> item.sellIn <= 0,
                 GildedRose.generateUpdatedSulfuras());
 
         assertEquals(1, itemsUpdated.size());
@@ -244,7 +244,7 @@ public class GildedRoseTest {
         List<Item> itemsUpdated = 
             GildedRose.updateItemsQualityAndSellIn(items, 
                 GildedRose.isBackstagePasses(), 
-                GildedRose.isSellInNoMoreThan0(),
+                return item -> item.sellIn <= 0,
                 GildedRose.generateUpdatedBackstagePasses());
 
         assertEquals(1, itemsUpdated.size());
@@ -434,7 +434,7 @@ public class GildedRoseTest {
         List<Item> itemsUpdated = 
             GildedRose.updateItemsQualityAndSellIn(items, 
                 GildedRose.isConjured(), 
-                GildedRose.isSellInNoMoreThan0(),
+                return item -> item.sellIn <= 0,
                 GildedRose.generateUpdatedConjured());
 
         assertEquals(1, itemsUpdated.size());
