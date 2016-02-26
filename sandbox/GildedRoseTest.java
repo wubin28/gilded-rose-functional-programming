@@ -170,7 +170,7 @@ public class GildedRoseTest {
 
         List<Item> itemsUpdated = 
             GildedRose.updateItemsQualityAndSellIn(items, 
-                GildedRose.isSulfuras(), 
+                item -> item.name.equals("Sulfuras, Hand of Ragnaros"), 
                 item -> item.sellIn > 0,
                 GildedRose.generateUpdatedSulfuras());
 
@@ -205,7 +205,7 @@ public class GildedRoseTest {
 
         List<Item> itemsUpdated = 
             GildedRose.updateItemsQualityAndSellIn(items, 
-                GildedRose.isSulfuras(), 
+                item -> item.name.equals("Sulfuras, Hand of Ragnaros"), 
                 item -> item.sellIn <= 0,
                 GildedRose.generateUpdatedSulfuras());
 

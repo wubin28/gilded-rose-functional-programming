@@ -24,10 +24,6 @@ class GildedRose {
                     !item.name.equals("Conjured");
     }
 
-    public static Predicate<Item> isSulfuras() {
-        return item -> item.name.equals("Sulfuras, Hand of Ragnaros");
-    }
-
     public static Predicate<Item> isBackstagePasses() {
         return item -> item.name.equals("Backstage passes to a TAFKAL80ETC concert");
     }
