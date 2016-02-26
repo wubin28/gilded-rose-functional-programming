@@ -1,6 +1,16 @@
-JUnit version 4.11-SNAPSHOT-20120416-1530
-........................
-Time: 0.104
-
-OK (24 tests)
-
+GildedRoseTest.java:285: error: cannot find symbol
+                GildedRose.isSellInGreaterThan10(),
+                          ^
+  symbol:   method isSellInGreaterThan10()
+  location: class GildedRose
+GildedRoseTest.java:323: error: cannot find symbol
+                GildedRose.isSellInBetween5And10(),
+                          ^
+  symbol:   method isSellInBetween5And10()
+  location: class GildedRose
+GildedRoseTest.java:361: error: cannot find symbol
+                GildedRose.isSellInBetween0And5(),
+                          ^
+  symbol:   method isSellInBetween0And5()
+  location: class GildedRose
+3 errors
