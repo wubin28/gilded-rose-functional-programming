@@ -24,10 +24,6 @@ class GildedRose {
                     !item.name.equals("Conjured");
     }
 
-    public static Predicate<Item> isConjured() {
-        return item -> item.name.equals("Conjured");
-    }
-
     public static Predicate<Item> isSellInGreaterThan10() {
         return item -> item.sellIn > 10;
     }

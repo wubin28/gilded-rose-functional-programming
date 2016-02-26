@@ -395,7 +395,7 @@ public class GildedRoseTest {
 
         List<Item> itemsUpdated = 
             GildedRose.updateItemsQualityAndSellIn(items, 
-                GildedRose.isConjured(), 
+                item -> item.name.equals("Conjured"), 
                 item -> item.sellIn > 0,
                 GildedRose.generateUpdatedConjured());
 
@@ -433,7 +433,7 @@ public class GildedRoseTest {
 
         List<Item> itemsUpdated = 
             GildedRose.updateItemsQualityAndSellIn(items, 
-                GildedRose.isConjured(), 
+                item -> item.name.equals("Conjured"), 
                 item -> item.sellIn <= 0,
                 GildedRose.generateUpdatedConjured());
 
