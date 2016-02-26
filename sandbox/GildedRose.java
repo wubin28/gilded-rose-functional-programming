@@ -56,7 +56,7 @@ class GildedRose {
         return item -> item.sellIn > 0 && item.sellIn <= 5;
     }
 
-    public static Function<Item, Item> generateUpdatedNormalItems() {
+    public static Function<Item, Item> generateUpdatedNormalItem() {
         return item -> {
             int updatedQuality = item.quality;
 

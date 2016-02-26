@@ -1,6 +1,11 @@
-JUnit version 4.11-SNAPSHOT-20120416-1530
-........................
-Time: 0.089
-
-OK (24 tests)
-
+GildedRoseTest.java:37: error: cannot find symbol
+                GildedRose.generateUpdatedNormalItems());
+                          ^
+  symbol:   method generateUpdatedNormalItems()
+  location: class GildedRose
+GildedRoseTest.java:71: error: cannot find symbol
+                GildedRose.generateUpdatedNormalItems());
+                          ^
+  symbol:   method generateUpdatedNormalItems()
+  location: class GildedRose
+2 errors
