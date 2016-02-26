@@ -34,7 +34,7 @@ public class GildedRoseTest {
             GildedRose.updateItemsQualityAndSellIn(items, 
                 GildedRose.isNormalItem(), 
                 item -> item.sellIn > 0,
-                GildedRose.generateUpdatedNormalItems());
+                GildedRose.generateUpdatedNormalItem());
 
         assertEquals(1, itemsUpdated.size());
         assertEquals(0, itemsUpdated.get(0).sellIn);
@@ -68,7 +68,7 @@ public class GildedRoseTest {
             GildedRose.updateItemsQualityAndSellIn(items, 
                 GildedRose.isNormalItem(), 
                 GildedRose.isSellInNoMoreThan0(),
-                GildedRose.generateUpdatedNormalItems());
+                GildedRose.generateUpdatedNormalItem());
 
         assertEquals(1, itemsUpdated.size());
         assertEquals(-1, itemsUpdated.get(0).sellIn);
