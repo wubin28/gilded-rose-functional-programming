@@ -282,7 +282,7 @@ public class GildedRoseTest {
         List<Item> itemsUpdated = 
             GildedRose.updateItemsQualityAndSellIn(items, 
                 item -> item.name.equals("Backstage passes to a TAFKAL80ETC concert"), 
-                GildedRose.isSellInGreaterThan10(),
+                item -> item.sellIn > 10,
                 GildedRose.generateUpdatedBackstagePasses());
 
         assertEquals(1, itemsUpdated.size());
