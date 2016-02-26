@@ -100,7 +100,7 @@ public class GildedRoseTest {
 
         List<Item> itemsUpdated = 
             GildedRose.updateItemsQualityAndSellIn(items, 
-                GildedRose.isAgedBrie(), 
+                item -> item.name.equals("Aged Brie"), 
                 item -> item.sellIn > 0,
                 GildedRose.generateUpdatedAgedBrie());
 
@@ -135,7 +135,7 @@ public class GildedRoseTest {
 
         List<Item> itemsUpdated = 
             GildedRose.updateItemsQualityAndSellIn(items, 
-                GildedRose.isAgedBrie(), 
+                item -> item.name.equals("Aged Brie"), 
                 item -> item.sellIn <= 0,
                 GildedRose.generateUpdatedAgedBrie());
 
